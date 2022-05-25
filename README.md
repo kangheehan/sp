@@ -14,6 +14,7 @@ try (Scanner scanner = new Scanner(System.in)) {
   }
 }
 ```
+
 #### Thread
 ```java
 public class CardServerLauncher {	
@@ -21,10 +22,10 @@ public class CardServerLauncher {
 		CardSocketServer cardServer = new CardSocketServer();		
 		Thread thread = new Thread(cardServer);
 		thread.start();
-		
+
 		CardHttpServer cardHttpServer = new CardHttpServer();
 		cardHttpServer.start();
-		
+
 		try(Scanner scanner = new Scanner(System.in)) {
 			String line;
 			while ((line = scanner.nextLine()) != null) {
